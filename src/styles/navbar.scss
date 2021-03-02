@@ -1,0 +1,85 @@
+@import "_sizes.scss";
+@import "_colors.scss";
+
+.navBarContainer {
+  height: $navBarSpace;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.navBar {
+  margin-right: $margin;
+  height: $navBarHeight;
+  background-color: $primary-color-light;
+  border-radius: ($navBarHeight / 2);
+  box-shadow: $shadow;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  background-color: $primary-color;
+  color: $primary-color-light;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 50px;
+  margin-left: $margin;
+  cursor: pointer;
+  box-shadow: $shadow;
+  text-align: center;
+}
+
+.authSection {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: $navBarHeight;
+  background-color: $primary-color;
+  border-radius: ($navBarHeight / 2);
+  display: inherit;
+  align-items: center;
+  cursor: pointer;
+  transition: 400ms;
+
+  h4 {
+    color: $primary-color-light;
+    transition: 400ms;
+  }
+
+  &:hover {
+    background-color: $primary-color-light;
+    h4 {
+      color: $primary-color;
+    }
+  }
+}
+
+.links {
+  height: $navBarHeight;
+  display: inherit;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: $primary-color;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 400ms;
+
+    &:hover {
+      color: $primary-color-dark;
+    }
+  }
+}

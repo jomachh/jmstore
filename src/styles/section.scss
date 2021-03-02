@@ -1,0 +1,42 @@
+@import "_sizes.scss";
+@import "_colors.scss";
+
+.section {
+  margin-left: $margin;
+  margin-right: $margin;
+  margin-top: $margin;
+
+  .sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: $primary-color-dark;
+
+    h3 {
+      user-select: none;
+      color: $primary-color-dark;
+      padding-bottom: 3px;
+    }
+
+    a {
+      color: $primary-color-dark;
+      text-decoration: none;
+    }
+  }
+
+  .sectionBody {
+    margin-top: ($margin * 0.5);
+    display: flex;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    overflow-x: scroll;
+  }
+
+  .space {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+}

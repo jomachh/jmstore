@@ -1,0 +1,251 @@
+@import "_sizes.scss";
+@import "_colors.scss";
+
+.modal {
+  padding: 15px;
+  background-color: $primary-color-light;
+  border-radius: $borderRadius;
+  z-index: 9999;
+  min-width: 300px;
+  overflow: hidden;
+  transition: 400ms;
+}
+
+.modal-title {
+  color: $primary-color-dark;
+  font-size: 20px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  max-height: 600px;
+  overflow-y: scroll;
+
+  .auth-container {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      color: $primary-color;
+
+      strong {
+        cursor: pointer;
+        color: $primary-color-dark;
+      }
+    }
+
+    .auth-element {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      border: none;
+      border-radius: $borderRadius;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      color: $primary-color-dark;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+
+  .cart-item {
+    display: inherit;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 500px;
+
+    img {
+      width: 150px;
+      height: 200px;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    div {
+      flex-direction: column;
+
+      h2 {
+        color: $primary-color-dark;
+      }
+
+      h3 {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .payment-modal {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-top: 10px;
+      color: $primary-color;
+    }
+
+    input {
+      border: none;
+      border-radius: $borderRadius;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      color: $primary-color-dark;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+}
+
+.payment-modal-small {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  .payment-modal-small-one {
+    margin-right: 10px;
+  }
+
+  .payment-modal-small-two {
+    margin-left: 10px;
+  }
+
+  .small-input:nth-child(1) {
+    margin-right: 10px;
+  }
+
+  .small-input {
+    width: 30px;
+  }
+}
+
+.small-container {
+  display: flex;
+}
+
+.modal-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+
+  .confirm-btn {
+    border: none;
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: $primary-color;
+    color: $primary-color-light;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: $borderRadius;
+    margin-left: 10px;
+  }
+
+  .cancel-btn {
+    border: none;
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: transparent;
+    color: $primary-color;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: $borderRadius;
+    margin-right: 10px;
+  }
+}
+
+.product-selected {
+  display: inherit;
+
+  .modal-img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+
+  div {
+    width: 285px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h2 {
+      color: $primary-color-dark;
+    }
+    h3 {
+      color: $primary-color;
+    }
+    h5 {
+      color: $primary-color;
+    }
+
+    .qty-container {
+      margin-top: 15px;
+      display: inherit;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+
+      .btn {
+        background-color: $primary-color-dark;
+        color: $primary-color-light;
+        height: 35px;
+        width: 35px;
+        border-radius: $borderRadius;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      input {
+        width: 30px;
+        padding: 5px;
+        color: $primary-color-dark;
+        font-weight: bold;
+        text-align: center;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+    }
+
+    .actions {
+      display: inherit;
+      flex-direction: row;
+      justify-content: space-between;
+
+      button {
+        width: 47%;
+        cursor: pointer;
+      }
+
+      .confirm-btn {
+        border: none;
+        padding: 5px;
+        background-color: $primary-color;
+        color: $primary-color-light;
+        font-weight: bold;
+        font-size: 15px;
+        border-radius: $borderRadius;
+      }
+
+      .cancel-btn {
+        border: none;
+        padding: 5px;
+        background-color: transparent;
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 15px;
+        border-radius: $borderRadius;
+      }
+    }
+  }
+}

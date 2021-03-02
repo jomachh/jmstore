@@ -1,0 +1,87 @@
+@import "_sizes.scss";
+@import "_colors.scss";
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 280px;
+  margin-top: 10px;
+  margin-right: 50px;
+  border-radius: $borderRadius;
+  box-shadow: $shadow;
+  cursor: pointer;
+  transition: 400ms;
+
+  &:hover {
+    box-shadow: $shadowHighlight;
+  }
+
+  img {
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
+    align-self: center;
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+    .productInfo {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+
+      h3 {
+        color: $primary-color-dark;
+      }
+
+      h4 {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.fab {
+  position: relative;
+  top: -290px;
+  right: 10px;
+  div {
+    background-color: $primary-color-dark;
+    color: $primary-color-light;
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $shadow;
+    transition: 400ms;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}
+
+.deleteFab {
+  position: relative;
+  top: -100px;
+  right: -290px;
+  div {
+    background-color: $primary-color-dark;
+    color: $primary-color-light;
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $shadow;
+    transition: 400ms;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}

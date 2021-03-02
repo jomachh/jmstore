@@ -1,0 +1,110 @@
+@import "_sizes.scss";
+@import "_colors.scss";
+
+.checkout-container {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+.checkout-title {
+  color: $primary-color-dark;
+  font-size: 25px;
+}
+
+.checkout-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-body {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.payment {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  position: sticky;
+  top: 20px;
+  width: 300px;
+  border-radius: $borderRadius;
+  box-shadow: $shadow;
+}
+
+.checkout-item {
+  box-shadow: $shadow;
+  padding: 10px;
+  border-radius: $borderRadius;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 480px;
+
+  img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  div {
+    flex-direction: column;
+
+    h2 {
+      color: $primary-color-dark;
+    }
+
+    h3 {
+      color: $primary-color;
+    }
+  }
+}
+
+.select-on-payment {
+  border: none;
+  color: $primary-color-dark;
+  background-color: $primary-color-light;
+  padding: 10px;
+  border-radius: $borderRadius;
+}
+
+.deleteFabCheckout {
+  position: relative;
+  top: -100px;
+  right: -290px;
+  div {
+    background-color: $primary-color-dark;
+    color: $primary-color-light;
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $shadow;
+    transition: 400ms;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}
+
+.btn {
+  margin-top: 10px;
+  border: none;
+  border-radius: $borderRadius;
+  padding: 10px;
+  color: $primary-color;
+  background-color: $primary-color-light;
+  cursor: pointer;
+}
+
+.subtitle-payment {
+  color: $primary-color-dark;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
