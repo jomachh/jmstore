@@ -83,7 +83,7 @@ const Checkout = ({ cart, user, deleteProduct, cleanCart }) => {
       const url = `${API_URL}user/cards/new`;
       const body = JSON.stringify({
         lastFour: cardNumber.slice(cardNumber.length - 4),
-        user: user.id,
+        user: user ? user.id : null,
       });
       const req = await fetch(url, {
         method: "POST",
@@ -103,7 +103,7 @@ const Checkout = ({ cart, user, deleteProduct, cleanCart }) => {
     } catch (error) {
       console.log(error);
     }
-  }, [cardNumber, user.id]);
+  }, [cardNumber, user]);
 
   const addAddress = useCallback(async () => {
     try {
@@ -112,7 +112,7 @@ const Checkout = ({ cart, user, deleteProduct, cleanCart }) => {
         line1,
         line2,
         city,
-        user: user.id,
+        user: user ? user.id : null,
       });
       const req = await fetch(url, {
         method: "POST",
@@ -132,7 +132,7 @@ const Checkout = ({ cart, user, deleteProduct, cleanCart }) => {
     } catch (error) {
       console.log(error);
     }
-  }, [city, line1, line2, user.id]);
+  }, [city, line1, line2, user]);
 
   const pay = useCallback(async () => {
     try {
@@ -144,6 +144,8 @@ const Checkout = ({ cart, user, deleteProduct, cleanCart }) => {
         user: user ? user.id : null,
         products: cart,
       });
+
+      console.log(JSON.parse(body));
 
       const req = await fetch(url, {
         method: "POST",
@@ -158,7 +160,7 @@ const Checkout = ({ cart, user, deleteProduct, cleanCart }) => {
       if (res.error === 0) {
         console.log("Crack");
         MySwal.fire({
-          title: "Felicidades, próximamente estarás recibiendo tu compra.",
+          title: `Felicidades, próximamente estarás recibiendo tu compra #${res.purchase}.`,
           icon: "success",
           showConfirmButton: true,
           confirmButtonText: "Continuar",
